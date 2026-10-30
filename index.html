@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kurt Vincent R. Lansang – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1720; --panel:#16212d; --line:#26364a; --ink:#e7edf3; --muted:#93a4b6;
+    --accent:#f2a93b; --accent2:#4fc3a1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  .mono{font-family:"IBM Plex Mono",monospace}
+  nav{position:sticky;top:0;background:rgba(15,23,32,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:5}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+  nav .logo{font-family:"IBM Plex Mono",monospace;color:var(--accent);font-weight:500}
+  nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:14px}
+  nav a:hover{color:var(--ink)}
+  header{padding:88px 0 64px;border-bottom:1px solid var(--line);
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:32px 32px;background-position:-1px -1px}
+  header .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--accent2);
+    border:1px solid var(--accent2);padding:3px 10px;border-radius:3px;background:var(--bg)}
+  h1{font-size:clamp(34px,6vw,54px);line-height:1.1;margin:18px 0 12px;font-weight:700}
+  header p{max-width:600px;color:var(--muted);font-size:18px;background:var(--bg)}
+  .btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:10px 18px;border-radius:4px;text-decoration:none;font-weight:500;font-size:15px}
+  .btn.p{background:var(--accent);color:#1a1205}
+  .btn.s{border:1px solid var(--line);color:var(--ink);background:var(--bg)}
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:14px;font-family:"IBM Plex Mono",monospace;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:22px}
+  h2::before{content:"// "}
+  h3{font-size:22px;margin-bottom:8px}
+  .lead{font-size:18px;max-width:720px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px}
+  .card h4{font-size:15px;margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:3px 8px;border-radius:3px;background:#1d2b3a;color:var(--ink);border:1px solid var(--line)}
+  .chip.todo{color:var(--muted);border-style:dashed}
+  .project{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:28px;margin-bottom:22px}
+  .project .meta{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);margin-bottom:14px}
+  .project ul{margin:14px 0 0 20px;color:var(--ink)}
+  .project li{margin-bottom:6px}
+  .diagram{margin-top:22px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px;overflow-x:auto}
+  .diagram svg{display:block;min-width:620px;width:100%;height:auto}
+  .caption{font-size:13px;color:var(--muted);margin-top:8px}
+  pre{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:16px;margin-top:18px;overflow-x:auto;font-size:13px;line-height:1.55;color:#cfe3d9}
+  pre .c{color:#6f8296}
+  .todo-note{color:var(--muted);font-style:italic}
+  .edu{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .contact .card span{display:block;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-bottom:4px}
+  .contacts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:8px;font-size:14px;background:var(--bg);padding:8px 0}
+  .contacts span{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .skills{list-style:none;display:grid;gap:12px}
+  .skills li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);border-radius:4px;padding:14px 18px}
+  .skills b{color:var(--accent)}
+  footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:620px){nav a{margin-left:12px;font-size:13px} nav .links a:nth-child(n+4){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <span class="logo">KVRL_</span>
+  <div class="links"><a href="#about">About Me</a><a href="#skills">Key Skills</a><a href="#projects">Projects</a></div>
+</div></nav>
+
+<header><div class="wrap">
+  <span class="tag">BSCPE · STI College – Calamba</span>
+  <h1>Kurt Vincent R. Lansang – Digital Portfolio</h1>
+  <div class="contacts mono">
+    <div><span>Email</span>lansang.356343@calamba.sti.edu.ph</div>
+    <div><span>Contact No.</span>0976 561 6129</div>
+    <div><span>Location</span>Mamatid, Cabuyao, Laguna</div>
+    <div><span>GitHub</span><a href="https://github.com/KurtVince" style="color:inherit">github.com/KurtVince</a></div>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>About Me</h2>
+  <p class="lead">Computer Engineering student at STI College – Calamba (2023 – present) with a STEM-Engineering background from Pamantasan ng Cabuyao, where I was a consistent honor student. I specialize in microcontroller systems, motor control and low-level programming, and I enjoy building hardware that works reliably. I have worked as an encoder at Wow BESU Mamatid and at Cabuyao Medical Clinic and Pharmacy, where I completed 80 hours of OJT, and I am a certified Safety Officer 2. I also joined the Youth Robotics Convention and Competition in 2021. I am looking for an OJT or entry-level role in embedded systems or hardware.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Key Skills</h2>
+  <ul class="skills">
+    <li><b>Programming:</b> x86 Assembly, Arduino C/C++, Python, Java</li>
+    <li><b>Computer-Aided Design:</b> Solid Edge CAD (Associate Level, 2025)</li>
+    <li><b>Microcontrollers and Embedded Systems:</b> Arduino Mega 2560, sensor and actuator interfacing</li>
+    <li><b>Motion Control and Power:</b> Stepper motors, DM556 drivers, LM2596 buck converters, 24 V supplies</li>
+    <li><b>Tools:</b> Emu8086, Arduino IDE, Microsoft Office (Word, Excel, PowerPoint)</li>
+    <li><b>Workplace Safety:</b> Certified Safety Officer 2 (SO2)</li>
+    <li><b>Communication:</b> Fluent in English and Filipino</li>
+  </ul>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Arduino-Based Compost Monitoring System</h3>
+    <div class="meta">Arduino Mega 2560 · DM556 · LM2596 · [Year]</div>
+    <p>A compost system with two chambers: an aerobic tumbler and an anaerobic mixer. An Arduino Mega 2560 controls both, each through its own stepper motor and DM556 driver. Everything runs from a single 24 V supply, stepped down with LM2596 buck converter modules.</p>
+    <ul>
+      <li>Planned and wired the 24 V power distribution and step-down stage.</li>
+      <li>Interfaced the Arduino with two DM556 stepper drivers to turn the tumbler and run the mixer.</li>
+      <li class="todo-note">[Add: sensors used, what the system monitors, results, photos, and your role if it was a group build]</li>
+    </ul>
+    <div class="diagram">
+      <svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace" font-size="12">
+        <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#93a4b6"/></marker></defs>
+        <g fill="#16212d" stroke="#26364a" stroke-width="1.5">
+          <rect x="10" y="100" width="110" height="50" rx="5"/>
+          <rect x="160" y="100" width="120" height="50" rx="5"/>
+          <rect x="320" y="100" width="130" height="50" rx="5" stroke="#f2a93b"/>
+          <rect x="490" y="30" width="80" height="44" rx="5"/>
+          <rect x="490" y="176" width="80" height="44" rx="5"/>
+          <rect x="590" y="30" width="82" height="44" rx="5" stroke="#4fc3a1"/>
+          <rect x="590" y="176" width="82" height="44" rx="5" stroke="#4fc3a1"/>
+        </g>
+        <g fill="#e7edf3" text-anchor="middle">
+          <text x="65" y="122">24 V PSU</text><text x="65" y="138" fill="#93a4b6" font-size="10">supply</text>
+          <text x="220" y="122">LM2596</text><text x="220" y="138" fill="#93a4b6" font-size="10">buck step-down</text>
+          <text x="385" y="122">Arduino</text><text x="385" y="138" fill="#93a4b6" font-size="10">Mega 2560</text>
+          <text x="530" y="56">DM556</text>
+          <text x="530" y="202">DM556</text>
+          <text x="631" y="50">Tumbler</text><text x="631" y="65" fill="#93a4b6" font-size="10">aerobic</text>
+          <text x="631" y="196">Mixer</text><text x="631" y="211" fill="#93a4b6" font-size="10">anaerobic</text>
+        </g>
+        <g stroke="#93a4b6" stroke-width="1.5" fill="none" marker-end="url(#a)">
+          <path d="M120 125 H158"/>
+          <path d="M280 125 H318"/>
+          <path d="M450 115 C470 115 470 52 488 52"/>
+          <path d="M450 135 C470 135 470 198 488 198"/>
+          <path d="M570 52 H588"/>
+          <path d="M570 198 H588"/>
+          <path d="M65 100 V12 H530 V28" stroke="#f2a93b" stroke-dasharray="4 4"/>
+          <path d="M65 150 V240 H530 V222" stroke="#f2a93b" stroke-dasharray="4 4"/>
+        </g>
+        <text x="300" y="25" fill="#f2a93b" font-size="10" text-anchor="middle">24 V motor power</text>
+        <text x="300" y="235" fill="#f2a93b" font-size="10" text-anchor="middle">24 V motor power</text>
+        <text x="474" y="129" fill="#93a4b6" font-size="10" text-anchor="start">STEP/DIR</text>
+      </svg>
+    </div>
+    <p class="caption">System block diagram. Check that the wiring shown matches your build before submitting.</p>
+  </div>
+
+  <div class="project">
+    <h3>x86 Assembly Laboratory Programs</h3>
+    <div class="meta">Emu8086 · Computer Architecture and Organization · SY 2026–2027</div>
+    <p>Lab programs written and debugged in Emu8086, working directly with registers, memory and DOS interrupts.</p>
+    <pre><span class="c">; sample: print a string with DOS INT 21h</span>
+.model small
+.stack 100h
+.data
+  msg db 'Hello, BSCPE 701!$'
+.code
+main:
+  mov ax, @data
+  mov ds, ax
+  mov ah, 09h        <span class="c">; DOS: print string</span>
+  lea dx, msg
+  int 21h
+  mov ah, 4Ch        <span class="c">; DOS: exit</span>
+  int 21h
+end main</pre>
+    <ul><li class="todo-note">[Replace the sample with one of your own lab programs and add 1–2 more with a short description of each]</li></ul>
+  </div>
+</div></section>
+
+<footer>© 2026 Kurt Vincent R. Lansang</footer>
+</body>
+</html>
